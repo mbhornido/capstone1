@@ -135,14 +135,14 @@ h4{
     padding: 0 0.938em;
 }
 
-/* .column {
+.column {
     margin-left: -0.938em;
     margin-right: -0.938em;
 }
 
 .column .row {
     padding:0 0.938em;
-} */
+} 
 .flexwrap {
     display: flex;
     flex-wrap: wrap;
@@ -199,6 +199,56 @@ h4{
     color: var(--light-text-color);
 }
 
+.object-cover img{
+    position: absolute;
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+
+.products .media{
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.primary-button, .secondary-button, .light-button{
+    font-size: var(--font-small);
+    padding: 0.9em 2em;
+    height: auto;
+    width: fit-content;
+    border-radius: 2em;
+    transition: .5s;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.primary-button:hover{
+    background-color: var(--secondary-color);
+}
+
+.secondary-button {
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+
+.secondary-button:hover {
+    background-color: var(--light-bg-color);
+    color: var(--secondary-dark-color);
+}
+
+.light-button{
+    background-color: var(--light-bg-color);
+}
+
+.light-button:hover{
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
 /* ======================================================================================================== */
 /* header */
 
@@ -448,9 +498,9 @@ form.search button:hover {
     background-color: var(--dark-color);
 }
 
-
+/* ============================================================================= */
  /* header responsive */
-
+/* ===================================================================================== */
  .site-off{
     position: fixed;
     width: 320px;
@@ -586,6 +636,66 @@ form.search button:hover {
     line-height: 16px;
     margin: 0 0.5em 0.5em 0;
 }
+
+/* =============================================================================
+                                SLIDER
+==================================================================================
+*/
+
+.slider .item {
+    position: relative;
+    height: 300px;
+}
+
+.slider .item .image img{
+    border-radius: 16px;
+}
+
+.slider .item::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    width: 450px;
+    height: 200px;
+    background-color: skyblue;
+    z-index: 1;
+    filter: blur(50px);
+    opacity: .5;
+}
+
+.slider .text-content{
+    position: absolute;
+    height: var(--percent100);
+    justify-content: flex-end;
+    padding: 0 0 10% 5%;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.slider h4{
+    font-size: var(--font-small);
+    font-weight: var(--fw7);
+    width: fit-content;
+    padding: 4px 10px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 4px; 
+}
+
+.text-content :where(h2,h3) span:first-child{
+    font-weight: var(--fw3);
+    columns: var(--light-bg-color);
+}
+
+.text-content:where(h2,h3) span:last-child{
+    color: var(--secondary-dark-color);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+
+
 /* 
      Responsive 
 */
@@ -688,5 +798,15 @@ form.search button:hover {
         bottom: 0;
         /* background: linear-gradient(90deg, rgba(225,225,225, 1) 0%, rgba(0, 0, 0, 1)); */
     }
+
+    .slider > div > .wrapper {
+        width: calc(100% - (300px + 2em));
+        margin-top: 1em;
+        margin-left: auto;
+    }
+
+
+    
+    
 
 }

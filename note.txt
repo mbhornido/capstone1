@@ -1,7 +1,8 @@
-skip 13.00 women
-skip 20:57 mega menu
+skip 13.00 
+skip 20:57 
 stop 30:40
 skip 45:49
 stop 46:25
 skip 54:00
 skip 55:42
+no 1:08:00
