@@ -656,9 +656,9 @@ form.search button:hover {
     position: absolute;
     top: 25%;
     left: 3%;
-    width: 450px;
+    width: 70%;
     height: 200px;
-    background-color: skyblue;
+    background-color: var(--white-color);
     z-index: 1;
     filter: blur(50px);
     opacity: .5;
@@ -808,5 +808,18 @@ form.search button:hover {
 
     
     
+
+}
+
+@media only screen and (max-width: 767px) {
+    .slider .item {
+        
+        height: 100vh;
+    }
+
+    .primary-button{
+        margin-top: 1git em;
+        font-size: var(--fw8);
+    }
 
 }
